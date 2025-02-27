@@ -16,4 +16,21 @@ console.log(
   "color: #d81b60; font-size: 16px; font-weight: bold;"
 );
 
-console.log("알맞은 스크립트를 작성하세요");
+function reply() {
+    const body = document.getElementById("replyArea").value;
+    document.getElementById("replyArea").value = "";
+
+    const newComment = document.createElement("li");
+    newComment.innerHTML = `
+    <div class="comment-item">
+      <div class="comment-author">
+        <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+        <span>방문자</span>
+      </div>
+      <div class="comment-content">
+        ${body}
+      </div>
+    </div>
+  `;
+    document.getElementById("comment-list").appendChild(newComment);
+}

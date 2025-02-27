@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>자기소개 위키 페이지</title>
+    <title>우테코 7기 BE 프리</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js"></script>
   </head>
@@ -130,24 +130,3 @@
     </div>
   </body>
 </html>
-
-<script>
-  function reply() {
-    const body = document.getElementById("replyArea").value;
-    document.getElementById("replyArea").value = "";
-
-    const newComment = document.createElement("li");
-    newComment.innerHTML = `
-    <div class="comment-item">
-      <div class="comment-author">
-        <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
-        <span>방문자</span>
-      </div>
-      <div class="comment-content">
-        ${body}
-      </div>
-    </div>
-  `;
-    document.getElementById("comment-list").appendChild(newComment);
-  }
-</script>
